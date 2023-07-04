@@ -1,4 +1,10 @@
+import { useNavigate } from "react-router-dom";
+
 const Register = () => {
+  const navigate = useNavigate();
+  const navigateToCalendar = () => {
+    navigate("/calendar");
+  };
   return (
     <>
       <div className="row">
@@ -47,7 +53,11 @@ const Register = () => {
                 id="retype-password"
               />
             </div>
-            <button type="submit" className="btn btn-primary">
+            <button
+              type="submit"
+              className="btn btn-primary"
+              onClick={navigateToCalendar}
+            >
               Register
             </button>
           </form>

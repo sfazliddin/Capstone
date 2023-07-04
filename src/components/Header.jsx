@@ -1,8 +1,8 @@
 const Header = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <a className="navbar-brand" href="#">
-        Header
+      <a className="navbar-brand" href="/">
+        DR. Smith
       </a>
       <button
         className="navbar-toggler"

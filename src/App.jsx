@@ -12,6 +12,7 @@ import NotFound from "./pages/NotFound";
 import Contact from "./pages/Contact";
 import Services from "./pages/Services";
 import NewPatient from "./pages/NewPatient";
+import Calendar from "./pages/Calendar";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/services" element={<Services />} />
           <Route path="/new-patient" element={<NewPatient />} />
+          <Route path="/calendar" element={<Calendar />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Container>
