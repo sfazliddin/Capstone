@@ -8,7 +8,13 @@ import Time from "../components/Time";
 const CalendarComponent = () => {
   const [date, setDate] = useState(new Date());
   const [showTime, setShowTime] = useState(false);
+  const isWeekend = (date) => {
+    const day = date.getDay();
+    return day === 0 || day === 6; // 0 is Sunday, 6 is Saturday
+  };
 
+  // Define a function to disable weekends in the calendar.
+  const tileDisabled = ({ date }) => isWeekend(date);
   return (
     <div className="app">
       <h1 className="header">Book an Appointment</h1>
@@ -18,6 +24,8 @@ const CalendarComponent = () => {
           value={date}
           onClickDay={() => setShowTime(true)}
           minDate={new Date()}
+          tileDisabled={tileDisabled}
+          minDetail="month"
         />
       </div>
 
